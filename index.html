@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, papel o tijera</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>¡Juego de piedra, papel o tijera!</h1>
+    </header>
+    <main class="container">
+        <div class="attempts">
+            Intentos: <span id="attempt-count">0</span>
+        </div>
+        <div class="scoreboard">
+            <div id="player-score">Jugador: 0</div>
+            <div id="computer-score">Computadora: 0</div>
+            <div id="draws">Empates: 0</div>
+        </div>
+        <h2> Jugador </h2>
+        <div class="choices">
+            <button id="player-piedra" class="choice">
+                <img class="rock" src="Imagenes/Firefly un dibujo de una piedra con cara tierna 56539.jpg" alt="Piedra">
+            </button>
+            <button id="player-papel" class="choice">
+                <img class="paper" src="Imagenes/Firefly un dibujo de un papel con cara tierna 53623.jpg" alt="Papel">
+            </button>
+            <button id="player-tijera" class="choice">
+                <img class="scissors" src="Imagenes/Firefly un dibujo de una tijera con cara tierna 95552.jpg" alt="Tijera">
+            </button>
+        </div>
+        <div class="result">
+            <p id="result-text">Haz tu elección para empezar a jugar.</p>
+        </div>
+        <div class="choice-display">
+            <div class="choice-selected" id="player-choice">
+                <img id="player-choice-img" src="" alt="">
+            </div>
+            <div class="choice-selected" id="computer-choice">
+                <img id="computer-choice-img" src="" alt="">
+            </div>
+        </div>
+        <div class="controls">
+            <button id="reset">Reiniciar juego</button>
+            <button id="switch-mode">Cambiar a Dos Jugadores</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
