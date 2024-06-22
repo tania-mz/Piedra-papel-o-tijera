@@ -1,0 +1,31 @@
+#lang racket
+(require graphics/graphics)
+(open-graphics)
+(define triqui (open-viewport "Tres en linea" 300 300))
+((draw-line triqui) (make-posn 200 0)(make-posn 200 300))
+((draw-line triqui) (make-posn 100 0)(make-posn 100 300))
+((draw-line triqui) (make-posn 0 100)(make-posn 300 100))
+((draw-line triqui) (make-posn 0 200)(make-posn 300 200))
+((draw
+
+(define (click counter counter2)
+(define ubicacion (get-mouse-click triqui))
+(define x (posn-x (mouse-click-posn ubicacion)))
+(define y (posn-y (mouse-click-posn ubicacion)))
+(if(< counter2 9)
+(if(< counter 1)
+(begin
+;(display x)
+;(display y)
+(((draw-pixmap-posn "xdef.png")triqui)(make-posn (* 100(quotient x 100)) (* 100(quotient y 100))))
+(click (+ 1 counter)(+ 1 counter2))
+)
+(begin
+(((draw-pixmap-posn "circle2.png")triqui)(make-posn (* 100(quotient x 100)) (* 100(quotient y 100))))
+(click 0 (+ 1 counter2))
+)
+  )
+(void)
+  )
+  )
+(click 0 0)
